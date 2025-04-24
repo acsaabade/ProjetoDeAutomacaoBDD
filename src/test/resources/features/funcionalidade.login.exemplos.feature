@@ -1,5 +1,6 @@
 #Author: acsaaba@hotmail.com
 
+@regressivos
 Feature: Realizar login no site saucedemo
  Como usuario do site saucedemo
  Quero informar os dados de acesso

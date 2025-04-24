@@ -1,10 +1,23 @@
 package runner;
 
+import org.junit.runner.RunWith;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import drivers.drivers;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features = "src/test/resources/features",
+		glue = "steps",
+		dryRun = true, //true estou em planejamento / false estou em execução
+		tags = "@regressivos",
+		monochrome = true,
+		plugin = {"pretty" ,"html:target/cucumber-report.html"}		
+		)
 
 public class Executa extends drivers {
 
